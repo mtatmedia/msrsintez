@@ -4,9 +4,9 @@ Online Tatar speech synthesis interface
 ## Инструкция по установке
 
 1) Подгружайте вот этот JavaScript файл в самом конце вашей страницы, чтобы не тормозить загрузку основного контента:
-~~~~
+```html
 <script type="text/javascript" src="msrsintez-external.js"></script>
-~~~~
+```
 
 2) Вот пример того, как можно вызывать функции:
 
