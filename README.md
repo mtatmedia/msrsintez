@@ -36,3 +36,8 @@ Online Tatar speech synthesis interface
     <param name="AllowScriptAccess" value="always" />
 </object>
 ~~~~
+
+4) На данный момент доступны следующие синтезаторы татарской речи:
+- Талгат
+- Тавзих
+- *** (в разработке)
