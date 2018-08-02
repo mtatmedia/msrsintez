@@ -1,6 +1,7 @@
 # msrsintez
 Online Tatar speech synthesis interface
 
+## Инструкция по установке
 
 1) Подгружайте вот этот JavaScript файл в самом конце вашей страницы, чтобы не тормозить загрузку основного контента:
 https://sintez.corpus.tatar/search/js/msrsintez-external.js
