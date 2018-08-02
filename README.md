@@ -10,7 +10,7 @@ Online Tatar speech synthesis interface
 
 2. Вот пример того, как можно вызывать функции:
 
-- Воспроизведение:
+   - Воспроизведение:
 ```html
 <input id='picPlay' type='image' src='images/btnPlay.png' title="Play" style="vertical-align: middle" onclick="javascript:play( document.getElementById('bigtext').textContent || document.getElementById('bigtext').innerText ); return false;">
 ```
