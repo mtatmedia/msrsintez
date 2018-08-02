@@ -10,17 +10,17 @@ Online Tatar speech synthesis interface
 
 2. Вот пример того, как можно вызывать функции:
 
-  * Воспроизведение:
+   * Воспроизведение:
 ```html
 <input id='picPlay' type='image' src='images/btnPlay.png' title="Play" style="vertical-align: middle" onclick="javascript:play( document.getElementById('bigtext').textContent || document.getElementById('bigtext').innerText ); return false;">
 ```
 
-  * Пауза:
+   * Пауза:
 ```html
 <input id='picPause' type='image' src='images/btnPause.png' title="Pause" style="vertical-align: middle" onclick="javascript:pause(); return false;">
 ```
 
-  * Стоп:
+   * Стоп:
 ```html
 <input id='picStop' type='image' src='images/btnStop.png' title="Stop" style="vertical-align: middle" onclick="javascript:stop(); return false;">
 ```
@@ -37,7 +37,7 @@ Online Tatar speech synthesis interface
 </object>
 ```
 
-4. Работа скрипта осуществляется через обращение к онлайн ресурсам проекта "Письменный корпус татарского языка" (www.corpus.tatar). На данный момент доступны следующие синтезаторы татарской речи:
-  * Талгат
-  * Тавзих
-  * *** (в разработке)
+4. Работа скрипта осуществляется через обращение к онлайн ресурсам проекта "Письменный корпус татарского языка" (www.corpus.tatar), поэтому перед использованием данной системы через домен http://corpus.tatar и его поддомены нужно сначала получить разрешение авторов "Письменного корпуса татарского языка" и авторов соответствующих синтезаторов речи. На данный момент доступны следующие синтезаторы татарской речи:
+   * Талгат
+   * Тавзих
+   * *** (в разработке)
