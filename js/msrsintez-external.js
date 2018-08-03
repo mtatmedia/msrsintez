@@ -1,6 +1,6 @@
 /*!
  * msrsintez-external module
- * Version 3.1-2018.08.02
+ * Version 3.2-2018.08.03
  *
  * Examples at: http://corpus.tatar/en
  * Copyright (c) 2015-2018 Mansur Saykhunov
@@ -55,21 +55,18 @@ function checkFlash()
 }
 function selectTTS()
 {
-	global_url = "https://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
-	/*
+	//global_url = "https://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
 	var e = document.getElementById("tts");
 	if (e === null) {
-		global_url = "http://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
+		global_url = "https://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
 	} else {
 		var strTTS = e.options[e.selectedIndex].value;
 		if(strTTS == "talgat") {
-			//global_url = "http://localhost/corpus/search/rhvoice.php?t="; // talgat
-			global_url = "http://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
+			global_url = "https://talgat.corpus.tatar/search/rhvoice.php?t="; // talgat
 		} else {
-			global_url = "http://tavzikh.corpus.tatar/?t="; // tavzikh
+			global_url = "https://tavzikh.corpus.tatar/?t="; // tavzikh
 		}
 	}
-	*/
 }
 function isAppLoaded()
 {
