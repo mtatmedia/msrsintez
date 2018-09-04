@@ -17,7 +17,7 @@ Online Tatar speech synthesis interface
 
    * Пауза:
 ```html
-<input id='picPause' type='image' src='images/btnPause.png' title="Pause" style="vertical-align: middle" onclick="javascript:pause(); return false;">
+<input id='picPause' type='image' src='images/btnPause.png' title="Pause" style="vertical-align: middle" onclick="javascript:pause(); return false;" hidden>
 ```
 
    * Стоп:
