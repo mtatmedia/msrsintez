@@ -26,6 +26,18 @@ var msraudio_flash;
 var msraudio_flash_next;
 var msraudio_flash_temp;
 
+function showPlay()
+{
+	document.getElementById("picPlay").style.display = "inline-block";
+	document.getElementById("picPause").style.display = "none";
+}
+
+function showPause()
+{
+	document.getElementById("picPlay").style.display = "none";
+	document.getElementById("picPause").style.display = "inline-block";
+}
+
 function fint2cyrtr(strin)
 {
 	var arrayft = { 'a':'а', 'ä':'ә', 'b':'б', 'v':'в', 'g':'г', 'd':'д', 'e':'е', 'c':'җ', 'z':'з', 'i':'и', 'y':'й', 'k':'к', 'l':'л', 'm':'м', 'n':'н', 'ñ':'ң', 'o':'о', 'ö':'ө', 'p':'п', 'r':'р', 's':'с', 't':'т', 'u':'у', 'ü':'ү', 'f':'ф', 'h':'һ', 'ç':'ч', 'ş':'ш', 'ı':'ы', 
@@ -114,6 +126,14 @@ function onUpdate()
 			// Preload next sentence
 			global_temp = encodeURI(global_msrtext[global_msrpos + 1]);
 			msraudio_html5_next.src = global_url+global_temp;
+		} else {
+			global_timerId2 = setTimeout(function msr_playing2() {
+				if(msraudio_html5.ended == true && global_paused == 0) {
+					showPlay();
+				} else {
+					global_timerId2 = setTimeout(msr_playing2, 100);
+				}
+			}, 100);
 		}
 	} else {
 		msraudio_flash.SetVariable("method:stop", "");
@@ -228,12 +248,16 @@ function play(msrtext)
 				msraudio_flash_next.SetVariable("method:play", "");
 				msraudio_flash_next.SetVariable("method:pause", "");
 			}
+			
+			showPause();
 		}
 		global_stop = 0;
 	}
 }
 function pause() 
 {
+	showPlay();
+	
 	global_paused = 1;
 	if(global_isHtml5Mp3) {
 		if(checkState()) {
@@ -252,6 +276,8 @@ function unpause()
 	
 	clearTimeout(global_timerId);
 	setUpdateTimer();
+	
+	showPause();
 }
 function stop() 
 {
@@ -264,4 +290,6 @@ function stop()
 		msraudio_flash.SetVariable("method:stop", "");
 		msraudio_flash_next.SetVariable("method:stop", "");
 	}
+	
+	showPlay();
 }
